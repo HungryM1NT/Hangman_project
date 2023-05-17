@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="font">Hangman</h1>
+        <img src="static/hangman_{{stage}}.png" width="300" height="300">
+        <p class="font">{{current_hint}}</p>
+        <p>
+            <span class="guess_fild">{{user_word}}</span>
+        </p>
+        <p class="font">Attempts left: {{attempts_used}}/{{attempts}}</p>
+        <form action="" method="post">
+            <p>
+                {% for i in up_symbols %}
+                    <button class="button-6" role="button" name="button" value={{i}}>{{i}}</button>
+                {% endfor %}
+            </p>
+            <p>
+                {% for i in mid_symbols %}
+                    <button class="button-6" role="button" name="button" value={{i}}>{{i}}</button>
+                {% endfor %}
+            </p>
+            <p>
+                {% for i in down_symbols %}
+                    <button class="button-6" role="button" name="button" value={{i}}>{{i}}</button>
+                {% endfor %}
+            </p>
+        </form>
+    </div>
+</body>
+</html>

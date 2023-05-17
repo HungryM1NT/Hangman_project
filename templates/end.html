@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="font">Hangman</h1>
+        <img src="static/hangman_{{stage}}.png" width="500" height="500">
+        <p class="font">{{result}}</p>
+        <P class="font">The word was {{word}}</P>
+        <form action="" method="post">
+            <button class="button-30" role="button">Restart</button>
+        </form>
+    </div>
+</body>
+</html>

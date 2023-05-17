@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="font">Hangman</h1>
+         <img src="static/hangman_1.png" width="300" height="300">
+        <p class="font">Enter a word:</p>
+        <form action="" method="post">
+            <input type="text" size="40" name="current_word" autocomplete="off">
+            <p class="error">{{word_error}}</p>
+            <p class="font">Enter a hint (1 word):</p>
+            <input type="text" size="40" name="current_hint" autocomplete="off">
+            <p class="error">{{hint_error}}</p>
+            <p>
+                <button class="button-30" role="button">Continue</button>
+            </p>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <script>
+        function set_difficulty() {
+            var slider = document.getElementById("slider");
+            var output = document.getElementById("rangeValue");
+            switch(slider.value) {
+                case '1':
+                    output.innerHTML = 'Baby mode';
+                    break;
+                case '2':
+                    output.innerHTML = 'Easy mode';
+                    break;
+                case '3':
+                    output.innerHTML = 'Normal mode';
+                    break;
+                case '4':
+                    output.innerHTML = 'Hard mode';
+                    break;
+                case '5':
+                    output.innerHTML = 'Impossible mode';
+                    break;
+}
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="font">Hangman</h1>
+         <img src="static/hangman_1.png" width="500" height="500">
+        <p class="font">Difficulty</p>
+        <form action="" method="post">
+        <input
+                type="range"
+                min="1"
+                max="5"
+                step="1"
+                id="slider"
+                name="slider"
+                onchange="set_difficulty()"/>
+            <p>
+                <span id="rangeValue" class="font">Normal mode</span>
+            </p>
+            <p>
+                <button class="button-30" role="button">Start</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
